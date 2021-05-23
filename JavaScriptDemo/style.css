@@ -1,0 +1,39 @@
+h2 {
+    color:red;
+    /* text-align: center; */
+    border-bottom: 1px solid;
+    display: inline-block;
+}
+
+div.parent {
+    border: 1px solid;
+    height: 500px;
+
+    /* 
+        By making position: RELATIVE, all CHILD elements with position: ABSOLUTE
+        will treat this parent container as reference for positioning themselves.
+    */
+    position: relative;
+}
+
+div.child-1 {
+    border: 1px solid green;
+    height: 20%;
+    width: 20%;
+
+     /* 
+        1. By making position: RELATIVE, this CHILD elements will treat its parent container 
+        as reference for positioning themselves EVEN if the parent does not have any position set.
+
+        2. By making position: ABSOLUTE, this CHILD elements will treat its parent container 
+        as reference for positioning themselves ONLY IF the parent has its position set to RELATIVE.
+    */
+    position: absolute;
+    top: 20px;
+}
+
+.child-1 button {
+    background: red;
+    /* position: fixed;
+    top: 30px; */
+}
